@@ -1,0 +1,22 @@
+stopword problem:
+    Stop words are the words in a stop list (or stoplist or negative dictionary) which are filtered out ("stopped") before or after processing of natural language data (i.e. text) because they are deemed to have little semantic value or are otherwise insignificant for the task at hand.
+
+From our first output we have this results:
+=== Cluster 0 ===
+Top keywords: examination, evaluation, december, midterm, 00, shall, final, ge, instructional, student
+
+=== Cluster 1 ===
+Top keywords: student, ssc, campus, lingayen, lc, supreme, council, psu, pangasinan, approval
+
+=== Cluster 2 ===
+Top keywords: campus, student, college, university, faculty, lingayen, pangasinan, office, member, year
+
+The things is we have words like "students", "psu", "lingayen", "pangasinan" which is makikita mo naman sa almost lahat ng memos
+we can call them stopwords which is redundant or insignificant sa model.
+
+TF‑IDF: a feature extraction / weighting method that converts raw text into a sparse vector where each dimension corresponds to a term;
+values reflect term frequency scaled by inverse document frequency (term importance per document).
+TruncatedSVD: a linear dimensionality‑reduction technique (low‑rank approximation of the term matrix via singular value decomposition) that projects high‑dimensional data into a lower‑dimensional dense space (captures latent global structure).
+
+Use TF‑IDF when you want interpretable, sparse term features for classic classifiers (logistic regression, SVM) or retrieval.
+Use TruncatedSVD when you want compact dense representations (reduced dimensionality), to speed downstream models, or to capture latent semantics (often applied after TF‑IDF to form LSA/LSI).
