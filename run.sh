@@ -18,9 +18,9 @@ activate_venv() {
 
 run_pipeline() {
     activate_venv
-    echo "➡️ Running clean_memos.py ..."
+    echo "➡️ Running docextractor.py ..."
     python docextractor.py
-    echo "➡️ Running cluster_memos.py ..."
+    echo "➡️ Running cluster.py ..."
     python cluster.py
     echo "[INFO] Pipeline finished successfully!"
 }
