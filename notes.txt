@@ -20,3 +20,31 @@ TruncatedSVD: a linear dimensionality‑reduction technique (low‑rank approxim
 
 Use TF‑IDF when you want interpretable, sparse term features for classic classifiers (logistic regression, SVM) or retrieval.
 Use TruncatedSVD when you want compact dense representations (reduced dimensionality), to speed downstream models, or to capture latent semantics (often applied after TF‑IDF to form LSA/LSI).
+
+Semantic coherence:
+Cluster 0 → approvals, financial, requests.
+Cluster 1 → events, training, participation.
+Cluster 2 → exams and schedules.
+Cluster 3 → instructional materials and evaluation.
+Cluster 4 → dress code / employee attire.
+Cluster 5 → online classes and modalities.
+Cluster 6 → meetings, officers, agendas.
+
+
+UMAP vs t-SNE for this task
+
+UMAP advantages
+
+Faster and scales better to thousands of documents.
+Preserves both local and global structure better (clusters don’t “float randomly”).
+Works directly on sparse TF-IDF matrices (no .toarray() needed).
+t-SNE advantages
+Often produces “cleaner blobs” in 2D/3D, which look nice for presentations.
+Very good at preserving local neighborhoods.
+
+t-SNE disadvantages
+Much slower, especially in 3D.
+Sensitive to hyperparameters (like perplexity).
+Less consistent: different runs can yield slightly different embeddings.
+
+choice: Stick with UMAP 3D for speed + scalability.

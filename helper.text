@@ -1,0 +1,4 @@
+clean transformer:
+transformers-cli delete-cache
+nuke the whole cache:
+transformers-cli cache --delete
